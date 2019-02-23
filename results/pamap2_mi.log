@@ -1,0 +1,73 @@
+Loading...
+loaded file ../datasets/PAMAP2/train/features.csv, dimensions: 7567 x 98
+loaded file ../datasets/PAMAP2/train/y_train.txt, dimensions: 7567 x 1
+loaded file ../datasets/PAMAP2/validation/features.csv, dimensions: 3781 x 98
+loaded file ../datasets/PAMAP2/validation/y_validation.txt, dimensions: 3781 x 1
+loaded file ../datasets/PAMAP2/test/features.csv, dimensions: 3792 x 98
+loaded file ../datasets/PAMAP2/test/y_test.txt, dimensions: 3792 x 1
+Calculating mutual information...
+(2.4358669319072037, 'tTotalAccJerk-std()', 35)
+(2.4357907788765285, 'tTotalAccJerk-energy()', 34)
+(2.2722807966620895, 'tTotalAcc-mean()', 0)
+(2.1409370171893571, 'tTotalAcc-std()', 8)
+(2.1370551787364938, 'tTotalAcc-energy()', 7)
+(2.1320574821164193, 'tTotalAcc-min()', 2)
+(2.1210992731167462, 'tTotalAccJerk-max()', 28)
+(2.1045175586334324, 'tTotalAccJerk-min()', 29)
+(2.0785265416733592, 'tTotalAccJerk-entropy()', 37)
+(2.0442580129543289, 'tTotalAcc-q25()', 4)
+(1.9091316503108331, 'tTotalAcc-iqr()', 6)
+(1.8771209062933556, 'tTotalAcc-q75()', 5)
+(1.828910594363564, 'tTotalAcc-max()', 1)
+(1.8188313306812691, 'tTotalAcc-median()', 3)
+(1.7659813233503601, 'tTotalAcc-entropy()', 10)
+(1.5351441411342932, 'tTotalAccJerk-iqr()', 33)
+(1.4259509371477825, 'tTotalAccJerk-correlation()', 36)
+(1.3390865931472826, 'tTotalAcc-correlation()', 9)
+(1.2266166096458184, 'tTotalAccJerk-q25()', 31)
+(1.1721881769638618, 'tTotalAccJerk-q75()', 32)
+(1.1280823088184946, 'tTotalAccJerk-mean()', 27)
+(0.88979820077079275, 'tTotalAccJerkL1Norm-std()', 44)
+(0.88963466189376761, 'tTotalAccJerkL1Norm-energy()', 43)
+(0.8499343720170357, 'tTotalAccMagSq-iqr()', 23)
+(0.8374430373591889, 'tTotalAccMagSq-max()', 21)
+(0.8371666329707943, 'tTotalAccJerkMagSq-energy()', 51)
+(0.83716553126334059, 'tTotalAccJerkMagSq-std()', 52)
+(0.83002807303698911, 'tTotalAccL1Norm-max()', 13)
+(0.82992994483978755, 'tTotalAccL1Norm-iqr()', 15)
+(0.80363630469600089, 'tTotalAccJerkL1Norm-max()', 40)
+(0.79688004517367572, 'tTotalAccMagSq-std()', 25)
+(0.79607871445212797, 'tTotalAccMagSq-energy()', 24)
+(0.77709454747476348, 'tTotalAccJerkMagSq-max()', 48)
+(0.77520265685490553, 'tTotalAccJerkMagSq-min()', 47)
+(0.7679061245329255, 'tTotalAccJerkL1Norm-min()', 39)
+(0.73291930956824536, 'tTotalAccJerkMagSq-iqr()', 50)
+(0.71701044518016388, 'tTotalAccJerkL1Norm-iqr()', 42)
+(0.69040424438557535, 'tTotalAccMagSq-mean()', 19)
+(0.66686071132541747, 'tTotalAccMagSq-min()', 20)
+(0.62107465328790257, 'tTotalAccJerkL1Norm-entropy()', 45)
+(0.58632989255315759, 'tTotalAccL1Norm-min()', 12)
+(0.58471155559079346, 'tTotalAccL1Norm-entropy()', 18)
+(0.54311996157631304, 'tTotalAccJerkMagSq-entropy()', 53)
+(0.53149487994445921, 'tTotalAccMagSq-entropy()', 26)
+(0.51466038545272075, 'tTotalAccL1Norm-std()', 17)
+(0.51328992164504161, 'tTotalAccL1Norm-energy()', 16)
+(0.49292969872180037, 'tTotalAccMagSq-median()', 22)
+(0.40885405883574977, 'tTotalAccJerkL1Norm-mean()', 38)
+(0.39677398901765393, 'tTotalAccJerkMagSq-mean()', 46)
+(0.39242336754834395, 'tTotalAccL1Norm-mean()', 11)
+(0.27928493974916324, 'tTotalAccL1Norm-median()', 14)
+(0.1989916427706343, 'tTotalAccJerkMagSq-median()', 49)
+(0.088539945970026013, 'tTotalAccJerkL1Norm-median()', 41)
+(0.062048134343974798, 'tTotalAccJerk-median()', 30)
+best at tTotalAccJerk-std() 254.461997 0.518381380587 0.539029535865 4.538003
+best at tTotalAccJerk-energy() 245.99572 0.510711451997 0.530063291139 9.00428
+best at tTotalAcc-mean() 390.263911 0.804284580799 0.800105485232 11.736089
+best at tTotalAcc-std() 395.820223 0.823591642423 0.821202531646 16.179777
+best at tTotalAcc-energy() 391.353946 0.823856122719 0.821729957806 20.646054
+best at tTotalAcc-min() 393.290849 0.834435334568 0.834388185654 23.709151
+best at tTotalAccJerk-max() 392.758078 0.840782861677 0.832542194093 27.241922
+best at tTotalAccJerk-min() 389.706022 0.839724940492 0.837289029536 30.293978
+best at tTotalAccJerk-entropy() 385.49814200000003 0.842898704047 0.842563291139 35.501858
+best at tTotalAcc-q25() 384.393873 0.845279026713 0.842299578059 38.606127
+all done!

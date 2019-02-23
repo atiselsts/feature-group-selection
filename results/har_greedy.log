@@ -1,0 +1,29 @@
+Loading...
+loaded file ../datasets/UCI HAR Dataset/train/features.csv, dimensions: 4694 x 98
+loaded file ../datasets/UCI HAR Dataset/train/y_train.txt, dimensions: 4694 x 1
+loaded file ../datasets/UCI HAR Dataset/validation/features.csv, dimensions: 2658 x 98
+loaded file ../datasets/UCI HAR Dataset/validation/y_validation.txt, dimensions: 2658 x 1
+loaded file ../datasets/UCI HAR Dataset/test/features.csv, dimensions: 2947 x 98
+loaded file ../datasets/UCI HAR Dataset/test/y_test.txt, dimensions: 2947 x 1
+Running greedy, combined score...
+best at tTotalAcc-max() 368.433799 0.74416854778 0.745843230404 3.566201
+one level deeper, used= ['tTotalAcc-max()']
+best at tTotalAcc-correlation() 410.911019 0.83784800602 0.823549372243 8.088981
+one level deeper, used= ['tTotalAcc-max()', 'tTotalAcc-correlation()']
+best at tTotalAccJerk-max() 419.365201 0.861550037622 0.825246012894 11.634799
+one level deeper, used= ['tTotalAcc-max()', 'tTotalAcc-correlation()', 'tTotalAccJerk-max()']
+best at tTotalAccMagSq-median() 425.307702 0.875470278405 0.823549372243 12.692298
+one level deeper, used= ['tTotalAcc-max()', 'tTotalAcc-correlation()', 'tTotalAccJerk-max()', 'tTotalAccMagSq-median()']
+best at tTotalAccJerk-correlation() 423.784922 0.881113619263 0.825246012894 17.215078
+one level deeper, used= ['tTotalAcc-max()', 'tTotalAcc-correlation()', 'tTotalAccJerk-max()', 'tTotalAccMagSq-median()', 'tTotalAccJerk-correlation()']
+best at tTotalAccL1Norm-entropy() 425.048962 0.887133182844 0.830675262979 18.951038
+one level deeper, used= ['tTotalAcc-max()', 'tTotalAcc-correlation()', 'tTotalAccJerk-max()', 'tTotalAccMagSq-median()', 'tTotalAccJerk-correlation()', 'tTotalAccL1Norm-entropy()']
+best at tTotalAccJerkMagSq-iqr() 425.145653 0.889390519187 0.826942653546 19.854347
+one level deeper, used= ['tTotalAcc-max()', 'tTotalAcc-correlation()', 'tTotalAccJerk-max()', 'tTotalAccMagSq-median()', 'tTotalAccJerk-correlation()', 'tTotalAccL1Norm-entropy()', 'tTotalAccJerkMagSq-iqr()']
+best at tTotalAccJerkMagSq-median() 421.11308 0.88374717833 0.827960637937 20.88692
+one level deeper, used= ['tTotalAcc-max()', 'tTotalAcc-correlation()', 'tTotalAccJerk-max()', 'tTotalAccMagSq-median()', 'tTotalAccJerk-correlation()', 'tTotalAccL1Norm-entropy()', 'tTotalAccJerkMagSq-iqr()', 'tTotalAccJerkMagSq-median()']
+best at tTotalAccJerkL1Norm-iqr() 421.209771 0.885252069225 0.829657278588 21.790229
+one level deeper, used= ['tTotalAcc-max()', 'tTotalAcc-correlation()', 'tTotalAccJerk-max()', 'tTotalAccMagSq-median()', 'tTotalAccJerk-correlation()', 'tTotalAccL1Norm-entropy()', 'tTotalAccJerkMagSq-iqr()', 'tTotalAccJerkMagSq-median()', 'tTotalAccJerkL1Norm-iqr()']
+best at tTotalAccJerkL1Norm-entropy() 419.473811 0.885628291949 0.827960637937 23.526189000000002
+stopping: not better than previous: 419.4738 vs 421.2098
+all done!

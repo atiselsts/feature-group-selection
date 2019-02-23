@@ -1,0 +1,32 @@
+Loading...
+loaded file ../datasets/SPHERE/train/features.csv, dimensions: 580 x 98
+loaded file ../datasets/SPHERE/train/y_train.txt, dimensions: 580 x 1
+loaded file ../datasets/SPHERE/validation/features.csv, dimensions: 289 x 98
+loaded file ../datasets/SPHERE/validation/y_validation.txt, dimensions: 289 x 1
+loaded file ../datasets/SPHERE/test/features.csv, dimensions: 291 x 98
+loaded file ../datasets/SPHERE/test/y_test.txt, dimensions: 291 x 1
+Evaluating baseline accuracy (all features)...
+validation: 0.8197 ['0.8166', '0.8131', '0.8201', '0.8062', '0.8270', '0.8270', '0.8270', '0.8235', '0.8201', '0.8166']
+test      : 0.8375 ['0.8522', '0.8419', '0.8179', '0.8385', '0.8454', '0.8351', '0.8282', '0.8419', '0.8385', '0.8351']
+Running greedy, combined score...
+best at tTotalAcc-mean() 378.234761 0.76124567474 0.807560137457 2.7652390000000002
+one level deeper, used= ['tTotalAcc-mean()']
+best at tTotalAcc-iqr() 402.644628 0.81660899654 0.80412371134 5.355372
+one level deeper, used= ['tTotalAcc-mean()', 'tTotalAcc-iqr()']
+best at tTotalAccMagSq-mean() 415.714673 0.844290657439 0.831615120275 6.2853270000000006
+one level deeper, used= ['tTotalAcc-mean()', 'tTotalAcc-iqr()', 'tTotalAccMagSq-mean()']
+best at tTotalAccL1Norm-mean() 419.80407 0.854671280277 0.828178694158 7.195930000000001
+one level deeper, used= ['tTotalAcc-mean()', 'tTotalAcc-iqr()', 'tTotalAccMagSq-mean()', 'tTotalAccL1Norm-mean()']
+best at tTotalAccJerkMagSq-iqr() 424.88214 0.865051903114 0.85910652921 8.11786
+one level deeper, used= ['tTotalAcc-mean()', 'tTotalAcc-iqr()', 'tTotalAccMagSq-mean()', 'tTotalAccL1Norm-mean()', 'tTotalAccJerkMagSq-iqr()']
+best at tTotalAcc-q25() 415.820753 0.854671280277 0.85910652921 11.179247
+one level deeper, used= ['tTotalAcc-mean()', 'tTotalAcc-iqr()', 'tTotalAccMagSq-mean()', 'tTotalAccL1Norm-mean()', 'tTotalAccJerkMagSq-iqr()', 'tTotalAcc-q25()']
+best at tTotalAcc-min() 414.76358 0.858131487889 0.86941580756 14.23642
+one level deeper, used= ['tTotalAcc-mean()', 'tTotalAcc-iqr()', 'tTotalAccMagSq-mean()', 'tTotalAccL1Norm-mean()', 'tTotalAccJerkMagSq-iqr()', 'tTotalAcc-q25()', 'tTotalAcc-min()']
+best at tTotalAccL1Norm-entropy() 423.02762 0.878892733564 0.85910652921 15.972380000000001
+one level deeper, used= ['tTotalAcc-mean()', 'tTotalAcc-iqr()', 'tTotalAccMagSq-mean()', 'tTotalAccL1Norm-mean()', 'tTotalAccJerkMagSq-iqr()', 'tTotalAcc-q25()', 'tTotalAcc-min()', 'tTotalAccL1Norm-entropy()']
+best at tTotalAccJerk-correlation() 418.50484 0.878892733564 0.85910652921 20.49516
+one level deeper, used= ['tTotalAcc-mean()', 'tTotalAcc-iqr()', 'tTotalAccMagSq-mean()', 'tTotalAccL1Norm-mean()', 'tTotalAccJerkMagSq-iqr()', 'tTotalAcc-q25()', 'tTotalAcc-min()', 'tTotalAccL1Norm-entropy()', 'tTotalAccJerk-correlation()']
+best at tTotalAcc-max() 416.988015 0.882352941176 0.855670103093 24.011985
+stopping: not better than previous: 416.9880 vs 418.5048
+all done!

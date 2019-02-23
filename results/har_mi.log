@@ -1,0 +1,73 @@
+Loading...
+loaded file ../datasets/UCI HAR Dataset/train/features.csv, dimensions: 4694 x 98
+loaded file ../datasets/UCI HAR Dataset/train/y_train.txt, dimensions: 4694 x 1
+loaded file ../datasets/UCI HAR Dataset/validation/features.csv, dimensions: 2658 x 98
+loaded file ../datasets/UCI HAR Dataset/validation/y_validation.txt, dimensions: 2658 x 1
+loaded file ../datasets/UCI HAR Dataset/test/features.csv, dimensions: 2947 x 98
+loaded file ../datasets/UCI HAR Dataset/test/y_test.txt, dimensions: 2947 x 1
+Calculating mutual information...
+(2.8466694259088152, 'tTotalAcc-min()', 2)
+(2.6613293181533875, 'tTotalAcc-q25()', 4)
+(2.457328926619105, 'tTotalAcc-max()', 1)
+(2.4304396397440553, 'tTotalAccJerk-std()', 35)
+(2.4304056899708031, 'tTotalAccJerk-energy()', 34)
+(2.3761392304695459, 'tTotalAcc-mean()', 0)
+(2.3258531677221432, 'tTotalAcc-q75()', 5)
+(2.2960016878321823, 'tTotalAccJerk-max()', 28)
+(2.290804547595787, 'tTotalAcc-entropy()', 10)
+(2.2830552005027176, 'tTotalAcc-std()', 8)
+(2.2603927218797932, 'tTotalAccJerk-entropy()', 37)
+(2.2592671867691356, 'tTotalAcc-energy()', 7)
+(2.1747756741026398, 'tTotalAcc-iqr()', 6)
+(2.1728464107587633, 'tTotalAcc-median()', 3)
+(2.1462637750711733, 'tTotalAccJerk-min()', 29)
+(1.9511347044295668, 'tTotalAccJerk-iqr()', 33)
+(1.7530361589735879, 'tTotalAccJerk-q75()', 32)
+(1.4324936924625489, 'tTotalAccJerk-correlation()', 36)
+(1.350448918778254, 'tTotalAccJerk-q25()', 31)
+(1.3085409857970527, 'tTotalAcc-correlation()', 9)
+(1.2816945988553397, 'tTotalAccJerk-mean()', 27)
+(1.156773270236102, 'tTotalAccMagSq-energy()', 24)
+(1.1563758756847007, 'tTotalAccMagSq-std()', 25)
+(1.0684834239521113, 'tTotalAccMagSq-max()', 21)
+(1.0524675204033236, 'tTotalAccMagSq-min()', 20)
+(1.0307741652820968, 'tTotalAccMagSq-mean()', 19)
+(0.98107876392240168, 'tTotalAccJerkMagSq-max()', 48)
+(0.9041302584758848, 'tTotalAccL1Norm-max()', 13)
+(0.90023926877840355, 'tTotalAccJerkMagSq-std()', 52)
+(0.89996831592535542, 'tTotalAccJerkMagSq-energy()', 51)
+(0.89762755527971916, 'tTotalAccJerkMagSq-min()', 47)
+(0.8599975926741712, 'tTotalAccMagSq-iqr()', 23)
+(0.84018504558134954, 'tTotalAccL1Norm-min()', 12)
+(0.83004756916353384, 'tTotalAccJerkL1Norm-energy()', 43)
+(0.82997662272398331, 'tTotalAccJerkL1Norm-std()', 44)
+(0.81935869356049018, 'tTotalAccL1Norm-iqr()', 15)
+(0.816989067461805, 'tTotalAccJerkL1Norm-max()', 40)
+(0.76675220004693079, 'tTotalAccL1Norm-entropy()', 18)
+(0.76369856073064279, 'tTotalAccJerkMagSq-iqr()', 50)
+(0.75364986480348395, 'tTotalAccJerkL1Norm-entropy()', 45)
+(0.74361532340206715, 'tTotalAccJerkL1Norm-min()', 39)
+(0.74110670377029808, 'tTotalAccMagSq-entropy()', 26)
+(0.7352807965052075, 'tTotalAccJerkL1Norm-iqr()', 42)
+(0.72463025843674511, 'tTotalAccMagSq-median()', 22)
+(0.71692968059096585, 'tTotalAccJerkMagSq-entropy()', 53)
+(0.58666137924613693, 'tTotalAccJerkMagSq-mean()', 46)
+(0.51465377788994604, 'tTotalAccJerkL1Norm-mean()', 38)
+(0.47227868465091549, 'tTotalAccL1Norm-std()', 17)
+(0.46160235671288763, 'tTotalAccL1Norm-energy()', 16)
+(0.45482017661520568, 'tTotalAccL1Norm-mean()', 11)
+(0.31783154292293248, 'tTotalAccL1Norm-median()', 14)
+(0.28945015970165494, 'tTotalAccJerkMagSq-median()', 49)
+(0.095579353318745341, 'tTotalAccJerkL1Norm-median()', 41)
+(0.0021247653472012133, 'tTotalAccJerk-median()', 30)
+best at tTotalAcc-min() 324.903473 0.656884875847 0.668137088565 3.096527
+best at tTotalAcc-q25() 376.799204 0.76561324304 0.726501526977 6.200796
+best at tTotalAcc-max() 383.277474 0.785553047404 0.761112996267 9.722526
+best at tTotalAccJerk-std() 398.772901 0.825432656132 0.807261621988 14.227098999999999
+best at tTotalAccJerk-energy() 398.306624 0.834085778781 0.808279606379 18.693376
+best at tTotalAcc-mean() 388.574815 0.820541760722 0.794706481167 21.425185
+best at tTotalAcc-q75() 385.524661 0.820165537998 0.78656260604 24.475338999999998
+best at tTotalAccJerk-max() 381.99189 0.820165537998 0.787241262301 28.00811
+best at tTotalAcc-entropy() 375.78401 0.817155756208 0.793349168646 33.21599
+best at tTotalAcc-std() 372.340322 0.819036869827 0.780794027825 37.659678
+all done!

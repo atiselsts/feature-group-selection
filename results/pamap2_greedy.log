@@ -1,0 +1,29 @@
+Loading...
+loaded file ../datasets/PAMAP2/train/features.csv, dimensions: 7567 x 98
+loaded file ../datasets/PAMAP2/train/y_train.txt, dimensions: 7567 x 1
+loaded file ../datasets/PAMAP2/validation/features.csv, dimensions: 3781 x 98
+loaded file ../datasets/PAMAP2/validation/y_validation.txt, dimensions: 3781 x 1
+loaded file ../datasets/PAMAP2/test/features.csv, dimensions: 3792 x 98
+loaded file ../datasets/PAMAP2/test/y_test.txt, dimensions: 3792 x 1
+Running greedy, combined score...
+best at tTotalAcc-energy() 345.477943 0.699021422904 0.698048523207 4.522057
+one level deeper, used= ['tTotalAcc-energy()']
+best at tTotalAccJerk-energy() 390.976269 0.800317376355 0.798786919831 9.023731
+one level deeper, used= ['tTotalAcc-energy()', 'tTotalAccJerk-energy()']
+best at tTotalAcc-q75() 405.871727 0.836815657234 0.831223628692 12.128272999999998
+one level deeper, used= ['tTotalAcc-energy()', 'tTotalAccJerk-energy()', 'tTotalAcc-q75()']
+best at tTotalAccL1Norm-iqr() 408.944699 0.844221105528 0.834651898734 13.055301
+one level deeper, used= ['tTotalAcc-energy()', 'tTotalAccJerk-energy()', 'tTotalAcc-q75()', 'tTotalAccL1Norm-iqr()']
+best at tTotalAccJerkMagSq-iqr() 412.040183 0.852155514414 0.8444092827 13.959817000000001
+one level deeper, used= ['tTotalAcc-energy()', 'tTotalAccJerk-energy()', 'tTotalAcc-q75()', 'tTotalAccL1Norm-iqr()', 'tTotalAccJerkMagSq-iqr()']
+best at tTotalAcc-q25() 411.990302 0.857445120339 0.847573839662 17.009698
+one level deeper, used= ['tTotalAcc-energy()', 'tTotalAccJerk-energy()', 'tTotalAcc-q75()', 'tTotalAccL1Norm-iqr()', 'tTotalAccJerkMagSq-iqr()', 'tTotalAcc-q25()']
+best at tTotalAccMagSq-max() 411.802081 0.859825443004 0.852848101266 18.197919
+one level deeper, used= ['tTotalAcc-energy()', 'tTotalAccJerk-energy()', 'tTotalAcc-q75()', 'tTotalAccL1Norm-iqr()', 'tTotalAccJerkMagSq-iqr()', 'tTotalAcc-q25()', 'tTotalAccMagSq-max()']
+best at tTotalAccJerk-iqr() 411.211948 0.863263686855 0.855748945148 20.788051999999997
+one level deeper, used= ['tTotalAcc-energy()', 'tTotalAccJerk-energy()', 'tTotalAcc-q75()', 'tTotalAccL1Norm-iqr()', 'tTotalAccJerkMagSq-iqr()', 'tTotalAcc-q25()', 'tTotalAccMagSq-max()', 'tTotalAccJerk-iqr()']
+best at tTotalAccL1Norm-median() 408.179375 0.860089923301 0.853902953586 21.820624999999996
+one level deeper, used= ['tTotalAcc-energy()', 'tTotalAccJerk-energy()', 'tTotalAcc-q75()', 'tTotalAccL1Norm-iqr()', 'tTotalAccJerkMagSq-iqr()', 'tTotalAcc-q25()', 'tTotalAccMagSq-max()', 'tTotalAccJerk-iqr()', 'tTotalAccL1Norm-median()']
+best at tTotalAccL1Norm-mean() 407.268772 0.860354403597 0.852056962025 22.731227999999994
+stopping: not better than previous: 407.2688 vs 408.1794
+all done!
