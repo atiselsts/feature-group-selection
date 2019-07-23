@@ -13,7 +13,7 @@ sys.path.append("..")
 import utils
 from ml_config import *
 
-SUB = ["train_original", "train", "validation", "test"]
+#SUB = ["train_original", "train", "validation", "test"]
 
 ###########################################
 
@@ -22,7 +22,7 @@ def main():
     if len(sys.argv) > 1:
         dataset = sys.argv[1]
 
-    for sub in SUB:
+    for sub in SUBSETS:
         dirname = os.path.join("..", "datasets", dataset, sub)
         short_sub = sub.replace("_original", "")
         filename = os.path.join(dirname, "y_{}.txt".format(short_sub))

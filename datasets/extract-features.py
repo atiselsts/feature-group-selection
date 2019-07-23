@@ -373,8 +373,6 @@ def calculate_features_of_transform(partition, x, y, z, jerk_name):
 
 def main():
     for dataset in utils.ALL_DATASETS:
-#        if "PAMAP2" != dataset:
-#            continue
         dataset_dir = dataset
         calculate_features(dataset_dir, "test")
         calculate_features(dataset_dir, "train")

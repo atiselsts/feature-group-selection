@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 #
-# File: separate_validation.py
+# File: UCI HAR Dataset/preprocess_and_cleanup.py
 #
 # Description: This script simply splits the train data in two parts.
 # The larger initial train part is kept as train data.

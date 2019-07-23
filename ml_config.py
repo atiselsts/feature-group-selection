@@ -14,13 +14,13 @@ RANDOM_ACCURACY = 0.4
 # since from 10 to 1000, and the higher, the worse
 W_ENERGY = -1
 
-MAX_FEATURES_GREEDY = 10
-
-USE_N_FOLD_CROSS_VALIDATION = False
+USE_N_FOLD_CROSS_VALIDATION = True
 NUM_VALIDATION_ITERATIONS = 5
 
 # if cross-validation is not used: the number of trials on which the score is averaged
 NUM_TRIALS = 1
+
+SUBSETS = ["train", "validation", "test"]
 
 def roundacc(acc):
     return int(round(acc))

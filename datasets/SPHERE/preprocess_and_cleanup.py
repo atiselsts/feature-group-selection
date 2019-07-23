@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
 #
+# File: SPHERE/preprocess_and_cleanup.py
+#
 # The purpose of this script is to prepare the SPHERE Challege dataset in a format similar to the HAR dataset.
 #
 # Steps:
@@ -251,7 +253,7 @@ def merge_annotations(dirname):
 
         current_annotations[i] = activity
 
-        all_same = False if activity == "UNKNOWN" else True
+        all_same = activity != "UNKNOWN"
         for j in range(num_annotations):
             if current_annotations[j] != current_annotations[i]:
                 all_same = False
@@ -351,6 +353,7 @@ def split_in_datasets():
     print("Rereading cleaned up input data...")
     for dirname in INPUTS:
         num_labels_per_class = {}
+        subject = int(dirname.strip("0"))
 
         filename = os.path.join(INPUT_DIR, dirname, "labels.csv")
         with open(filename, "r") as f:
@@ -369,10 +372,10 @@ def split_in_datasets():
 
         for i in range(len(labels)):
             label = labels[i]
-            all_data.append((label, windows["x"][i], windows["y"][i], windows["z"][i]))
+            all_data.append((subject, label, windows["x"][i], windows["y"][i], windows["z"][i]))
 
     print("Separating and filtering data...")
-    filtered_data = [x for x in all_data if x[0] in ONLY_LABEL_CODES]
+    filtered_data = [x for x in all_data if x[1] in ONLY_LABEL_CODES]
 
     partitions = {}
     for partname, _ in classes:
@@ -380,7 +383,7 @@ def split_in_datasets():
 
     per_label = {}
     for label in ONLY_LABEL_CODES:
-        per_label[label] = [x for x in all_data if x[0] == label]
+        per_label[label] = [x for x in all_data if x[1] == label]
         n = len(per_label[label])
         # shuffle the data randomly, to avoid putting different subjects in the test set than in the train set
         random.shuffle(per_label[label])
@@ -401,15 +404,20 @@ def split_in_datasets():
         create_out_dir(os.path.join("./", partname))
         create_out_dir(os.path.join("./", partname, OUT_DIR))
 
+        filename = os.path.join("./", partname, "subject_{}.txt".format(partname))
+        with open(filename, "w") as outf:
+            subjects = [str(u[0]) for u in partitions[partname]]
+            outf.write("\n".join(subjects) + "\n")
+
         filename = os.path.join("./", partname, "y_{}.txt".format(partname))
         with open(filename, "w") as outf:
-            labels = [u[0] for u in partitions[partname]]
+            labels = [u[1] for u in partitions[partname]]
             outf.write("\n".join(labels) + "\n")
 
         for i, a in enumerate(AXES):
             filename = os.path.join("./", partname, OUT_DIR, "total_acc_{}_{}.txt".format(a, partname))
             with open(filename, "w") as outf:
-                windows = [u[i + 1] for u in partitions[partname]]
+                windows = [u[i + 2] for u in partitions[partname]]
                 outf.write("\n".join(windows) + "\n")
 
 

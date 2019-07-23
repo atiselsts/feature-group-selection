@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 
 #
-# The purpose of this script the PAMAP2 in a format similar to the HAR dataset.
+# File: PAMAP2/preprocess_and_cleanup.py
+#
+# The purpose of this script is to put the PAMAP2 in a format similar to the HAR dataset.
 #
 # Steps:
 #
@@ -28,6 +30,7 @@ SELF_DIR = os.path.dirname(os.path.realpath(__file__))
 
 sys.path.append("../..")
 import utils
+from ml_config import *
 
 INPUT_DIR = "./ProtocolData"
 
@@ -68,8 +71,6 @@ WINDOW_SIZE_SECONDS = WINDOW_SIZE_SAMPLES / SAMPLING_RATE_HZ
 # meters per second squared
 SCALING_FACTOR_ONE_G = 9.80665 
 
-SUBS = ["train", "validation", "test"]
-
 ##########################################
 
 def create_out_dir(outdir):
@@ -102,20 +103,30 @@ def load_file(filename):
             if math.isnan(z[-1]):
                 z[-1] = z[-2]
 
+    # round to whole windows
+    rounded_size = len(activities) // WINDOW_SIZE_SAMPLES * WINDOW_SIZE_SAMPLES
+    activities = activities[:rounded_size]
+    x = x[:rounded_size]
+    y = y[:rounded_size]
+    z = z[:rounded_size]
+
     return activities, x, y, z
                       
 ##########################################
 
 def process():
+    subjects = []
     activities = []
     data = {"x" : [], "y" : [], "z" : []}
 
     for inputname in INPUTS:
         print("Loading input file " + inputname)
+        subject = int(inputname[7:10])
 
         input_filename = os.path.join(INPUT_DIR, inputname)
         tactivities, tx, ty, tz = load_file(input_filename)
 
+        subjects += [subject] * len(tactivities)
         activities += tactivities
         data["x"] += tx
         data["y"] += ty
@@ -128,22 +139,19 @@ def process():
     i = 0
     while i + WINDOW_SIZE_SAMPLES <= len(activities):
         slice = activities[i:i+WINDOW_SIZE_SAMPLES]
+        subject = subjects[i] # as all slice must have the same subject
         value, count = Counter(slice).most_common()[0]
         if count >= MIN_COUNT and value != 0:
             if value not in per_label:
                 per_label[value] = []
-            # just remember the start of the data
-            per_label[value].append(i)
+            # just remember the start of the data and the subject
+            per_label[value].append((i, subject))
         i += WINDOW_SIZE_SAMPLES
-
-    print("Shuffling things around...")
-    for label in per_label:
-        random.shuffle(per_label[label])
 
     print("Separating in train / validation / test...")
     per_sub_per_label = {}
-    for sub in SUBS:
-        per_sub_per_label[sub] = {}
+    for subset in SUBSETS:
+        per_sub_per_label[subset] = {}
 
     for label in per_label:
         random.shuffle(per_label[label])
@@ -168,8 +176,17 @@ def process():
         with open(filename, "w") as outf:
             to_write = []
             for label in order:
-                for index in per_sub_per_label[sub][label]:
+                for index, subject in per_sub_per_label[sub][label]:
                     to_write.append(str(label))
+            outf.write("\n".join(to_write) + "\n")
+
+        print("writing subjects for", sub)
+        filename = os.path.join("./", sub, "subject_{}.txt".format(sub))
+        with open(filename, "w") as outf:
+            to_write = []
+            for label in order:
+                for index, subject in per_sub_per_label[sub][label]:
+                    to_write.append(str(subject))
             outf.write("\n".join(to_write) + "\n")
 
         print("writing data for", sub)

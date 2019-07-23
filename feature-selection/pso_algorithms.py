@@ -24,6 +24,7 @@ sys.path.append("../energy-model")
 import utils
 import energy_model
 from ml_config import *
+import ml_state
 
 ###########################################
 
@@ -32,7 +33,11 @@ NUM_PARTICLES = 10000
 # the number of iterations (100 in Xue's paper; usually converges faster?)
 NUM_ITERATIONS = 100
 
-INITIALIZE_WITH_SPECIAL_PARTICLES = False
+# for testing
+if False:
+    NUM_PARTICLES = 10
+    NUM_ITERATIONS = 2
+
 INITIALIZE_WITH_ALL_PAIRS = True
 
 # To make it prefer fewer particles, increase this
@@ -49,14 +54,6 @@ VMAX = 0.6   # 6 in the other one
 
 # for multiobjective
 NUM_DIMENSIONS = 2
-
-# from greedy, group selection
-SPECIAL_PARTICLES = [
-    ['tTotalAcc-q25()'],
-    ['tTotalAccJerkMagSq-median()', 'tTotalAcc-q25()'],
-    ['tTotalAccJerkMagSq-median()', 'tTotalAcc-q75()', 'tTotalAcc-q25()'],
-    ['tTotalAccMag-sma()', 'tTotalAccJerkMagSq-median()', 'tTotalAcc-q75()', 'tTotalAcc-q25()']
-]
 
 ###########################################
 
@@ -300,63 +297,18 @@ def make_particle_from_config(s, config, is_multi):
 
 ###########################################
 
-class State:
+class PSOState(ml_state.State):
     def __init__(self):
+        super().__init__()
         # global best of the swarm
         self.best_particle = None
         # already evaluated positions
         self.cache = {}
         # already evaluated positions: vector of scores for multi-objective optimization
         self.mcache = {}
-        # whether to operate at group or individual vector level
-        self.do_subselection = False
-
-    def load(self, dataset):
-        filename = os.path.join("..", "datasets", dataset, "train", "features.csv")
-        self.train = np.asarray(utils.load_csv(filename, skiprows=1))
-        filename = os.path.join("..", "datasets", dataset, "train", "y_train.txt")
-        self.train_y = np.asarray(utils.load_csv(filename)).ravel()
-
-        filename = os.path.join("..", "datasets", dataset, "validation", "features.csv")
-        self.validation = np.asarray(utils.load_csv(filename, skiprows=1))
-        filename = os.path.join("..", "datasets", dataset, "validation", "y_validation.txt")
-        self.validation_y = np.asarray(utils.load_csv(filename)).ravel()
-
-        filename = os.path.join("..", "datasets", dataset, "test", "features.csv")
-        self.test = np.asarray(utils.load_csv(filename, skiprows=1))
-        filename = os.path.join("..", "datasets", dataset, "test", "y_test.txt")
-        self.test_y = np.asarray(utils.load_csv(filename)).ravel()
-
-        filename = os.path.join("..", "feature_names.csv")
-        self.names = utils.read_list_of_features(filename)
-
-        if self.do_subselection:
-            self.groups = [n[1] for n in self.names]
-        else:
-            # need to preserve order, so cannot uniquify via the usual way (via a set)
-            self.groups = []
-            for n in self.names:
-                if n[2] not in self.groups:
-                    self.groups.append(n[2])
-
-        self.num_features = len(self.groups) # number of features
-
 
     def init_particles(self, is_multi):
         self.particles = []
-
-        if INITIALIZE_WITH_SPECIAL_PARTICLES:
-            # put in the best from the greedy selection
-            for config in SPECIAL_PARTICLES:
-                indexes = []
-                for feature in config:
-                    # print("feature=", feature, "index=", self.groups.index(feature))
-                    indexes.append(self.groups.index(feature))
-                #print("indexes=", indexes)
-                # add in multiple copies
-                self.particles.append(make_particle_from_config(self, indexes, is_multi))
-                self.particles.append(make_particle_from_config(self, indexes, is_multi))
-                self.particles.append(make_particle_from_config(self, indexes, is_multi))
 
         if INITIALIZE_WITH_ALL_PAIRS:
             # initialize with all possible pairs of particles
@@ -364,6 +316,10 @@ class State:
                 for j in range(i + 1, self.num_features):
                     indexes = (i, j)
                     self.particles.append(make_particle_from_config(self, indexes, is_multi))
+                    if len(self.particles) >= NUM_PARTICLES:
+                        break
+                if len(self.particles) >= NUM_PARTICLES:
+                        break
             #print("num particles=", len(self.particles))
 
         # Initialize with extra, random particles
@@ -379,40 +335,6 @@ class State:
         for p in self.particles[1:]:
             if p.score > self.best_particle.best_score:
                 self.best_particle = p
-
-    def eval_accuracy(self, indexes):
-        if len(indexes) == 0:
-            return RANDOM_ACCURACY, RANDOM_ACCURACY
-
-        selector = utils.select(self.names, self.groups, indexes, self.do_subselection)
-        features_train = self.train[:,selector]
-        features_validation = self.validation[:,selector]
-        scores = []
-        for i in range(NUM_TRIALS):
-            # use balanced weigths to account for class imbalance
-            # (we're trying to optimize f1 score, not accuracy?)
-            clf = RandomForestClassifier(n_estimators = NUM_TREES, random_state=i,
-                                         class_weight = "balanced")
-            clf.fit(features_train, self.train_y)
-            hypothesis = clf.predict(features_validation)
-            f1 = f1_score(self.validation_y, hypothesis, average="micro")
-            scores.append(f1)
-
-        validation_score = np.mean(scores)
-        #print("validation score=", validation_score)
-
-        # check also the results on the test set
-        features_test = self.test[:,selector]
-        hypothesis = clf.predict(features_test)
-        f1 = f1_score(self.test_y, hypothesis, average="micro")
-        test_score = f1
-
-        return validation_score, test_score
-
-    def eval_energy(self, indexes):
-        names = [self.groups[i] for i in indexes]
-        #print("names=", names)
-        return sum(energy_model.calc(names))
 
     def score(self, indexes):
         # this was already seen?
@@ -490,7 +412,7 @@ def sort_by_crowding(s):
 #
 def so_pso(dataset):
     print("Single objective")
-    s = State()
+    s = PSOState()
     print("Loading...")
     s.load(dataset)
     print("Initializing starting positions and scores...")
@@ -540,7 +462,7 @@ def so_pso(dataset):
 #
 def mo_pso(dataset):
     print("Multi objective")
-    s = State()
+    s = PSOState()
     print("Loading...")
     s.load(dataset)
     print("Initializing starting positions and scores...")

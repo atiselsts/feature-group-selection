@@ -20,12 +20,11 @@ To prepare the data for running the feature selection algorithms, run these step
 ```
 $ cd datasets
 $ cd SPHERE; ./preprocess_and_cleanup.py; cd ..
-$ cd "UCI HAR Dataset"; ./separate_validation.py; cd ..
-$ # the next line is not needed
-$ # cd PAMAP2; ./extract_and_split.py; cd ..
-$ ./extract-features.py SPHERE
-$ ./extract-features.py PAMAP2
-$ ./extract-features.py "UCI HAR Dataset"
+$ cd "UCI HAR Dataset"; ./preprocess_and_cleanup.py; cd ..
+$ # this is not needed since the full PAMAP2 datset is not included due to its size
+$ # cd PAMAP2; ./preprocess_and_cleanup.py; cd ..
+$ # this will do the job for all datasets
+$ ./extract-features.py
 ```
 
 To run a feature selection algorithms, e.g. the greedy selection:
