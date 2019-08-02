@@ -40,9 +40,10 @@ def plot(filename, labels, data, use_test_scores, xlim=None):
             y = [u[1] for u in d] # validation
         ax.plot(x, y, label=l[0], marker=l[2], markersize=6)
 
-    ax.set_ylim(0.5, 0.92)
+#    ax.set_ylim(0.5, 0.92)
+    ax.set_ylim(0.41, 1.0)
     if xlim is None:
-        xlim = 50
+        xlim = 35
     ax.set_xlim(0, xlim)
     if SHOW_RAW:
         pl.gca().axvline(costs_tx["raw"], 0, 200, color="red")
@@ -297,10 +298,10 @@ def read_data(dataset):
 
 def main():
     suffix = "m_multi"
-    data, fn = parse_pso("SPHERE", suffix)
+    data, fn = parse_pso("har", suffix)
     labels = [("Run " + str(x), suffix, "o") for x in range(1, 11)]
-    plot("SPHERE_multi_validation.pdf", labels, data, False, xlim=28)
-    plot("SPHERE_multi_test.pdf", labels, data, True, xlim=28)
+    plot("har_multi_validation.pdf", labels, data, False, xlim=28)
+    plot("har_multi_test.pdf", labels, data, True, xlim=28)
 
     feature_names_per_algorithm = [[] for _ in CATEGORIES]
     for dataset in utils.ALL_DATASETS_SHORT:
@@ -308,18 +309,18 @@ def main():
         plot(dataset + "_validation.pdf", CATEGORIES, data, False)
         plot(dataset + "_test.pdf", CATEGORIES, data, True)
 
-        plot_fn("fn_by_ds_" + dataset + ".pdf", feature_names)
+#        plot_fn("fn_by_ds_" + dataset + ".pdf", feature_names)
 
-        for i, c in enumerate(CATEGORIES):
-            feature_names_per_algorithm[i].append(feature_names[i])
+#        for i, c in enumerate(CATEGORIES):
+#            feature_names_per_algorithm[i].append(feature_names[i])
 
-    feature_names_all = []
-    for i, c in enumerate(CATEGORIES):
-        plot_fn("fn_by_algorithm_" + c[1] + ".pdf", feature_names_per_algorithm[i])
-        for gr in feature_names_per_algorithm[i]:
-            feature_names_all.append(gr)
+#    feature_names_all = []
+#    for i, c in enumerate(CATEGORIES):
+#        plot_fn("fn_by_algorithm_" + c[1] + ".pdf", feature_names_per_algorithm[i])
+#        for gr in feature_names_per_algorithm[i]:
+#            feature_names_all.append(gr)
 
-    plot_fn("fn_by_all.pdf", feature_names_all)
+#    plot_fn("fn_by_all.pdf", feature_names_all)
 
 ###########################################
     

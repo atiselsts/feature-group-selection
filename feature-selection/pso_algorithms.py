@@ -159,7 +159,7 @@ def copy_moparticle(p):
 
 class MultiObjectiveParticle(Particle):
     def __init__(self, s, num_features):
-        super(MultiObjectiveParticle, self).__init__(s, num_features)       
+        super(MultiObjectiveParticle, self).__init__(s, num_features)
 
     def setup(self):
         if self.config:
@@ -278,7 +278,7 @@ class MultiObjectiveParticle(Particle):
             elif self.v[i] < -VMAX:
                 self.v[i] = -VMAX
         #print(["{:.2f}".format(x) for x in self.v])
-        
+
 
 ###########################################
 
@@ -437,6 +437,7 @@ def so_pso(dataset):
                 # update the global best
                 #print("new gb")
                 s.best_particle = p
+        print("Best: {}".format(s.best_particle))
 
     sort(s.particles)
     for p in s.particles:
@@ -445,11 +446,17 @@ def so_pso(dataset):
     print("\nFinal Pareto front")
     # treat as multidimensional optimization and find the Pareto front
     mp = []
+    seen_indexes = set()
     for p in s.particles:
         mp.append(MultiObjectiveParticle(s, s.num_features))
         mp[-1].setup()
+        indexes = mp[-1].get_indexes()
+        if indexes in seen_indexes:
+            continue # already have this particle
+        seen_indexes.add(indexes)
         mp[-1].x = p.x
         mp[-1].eval()
+
     f1, _ = nondominated_sort(mp)
     for p in f1:
         print(" ", p)
@@ -514,7 +521,7 @@ def mo_pso(dataset):
     f1, _ = nondominated_sort(s.particles)
     for p in f1:
         print(" ", p)
-        
+
 ###########################################
 
 def main():
@@ -532,8 +539,15 @@ def main():
     else:
         mo_pso(dataset)
 
+def har_multi():
+    for i in range(10):
+        mo_pso("UCI HAR Dataset")
+
 ###########################################
-    
+
 if __name__ == '__main__':
-    main()
+    if True:
+      main()
+    else:
+      har_multi()
     print("all done!")

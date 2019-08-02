@@ -1,29 +1,55 @@
 Loading...
-loaded file ../datasets/PAMAP2/train/features.csv, dimensions: 7567 x 98
-loaded file ../datasets/PAMAP2/train/y_train.txt, dimensions: 7567 x 1
-loaded file ../datasets/PAMAP2/validation/features.csv, dimensions: 3781 x 98
-loaded file ../datasets/PAMAP2/validation/y_validation.txt, dimensions: 3781 x 1
-loaded file ../datasets/PAMAP2/test/features.csv, dimensions: 3792 x 98
-loaded file ../datasets/PAMAP2/test/y_test.txt, dimensions: 3792 x 1
+loaded file ../datasets/PAMAP2/train/features.csv, dimensions: 7568 x 98
+loaded file ../datasets/PAMAP2/train/y_train.txt, dimensions: 7568 x 1
+loaded file ../datasets/PAMAP2/train/subject_train.txt, dimensions: 7568 x 1
+loaded file ../datasets/PAMAP2/validation/features.csv, dimensions: 3782 x 98
+loaded file ../datasets/PAMAP2/validation/y_validation.txt, dimensions: 3782 x 1
+loaded file ../datasets/PAMAP2/validation/subject_validation.txt, dimensions: 3782 x 1
+loaded file ../datasets/PAMAP2/test/features.csv, dimensions: 3794 x 98
+loaded file ../datasets/PAMAP2/test/y_test.txt, dimensions: 3794 x 1
+loaded file ../datasets/PAMAP2/test/subject_test.txt, dimensions: 3794 x 1
+subject left out: 102.0
+Stopping energy value is 31.4710
 Running greedy, combined score...
-best at tTotalAcc-energy() 345.477943 0.699021422904 0.698048523207 4.522057
-one level deeper, used= ['tTotalAcc-energy()']
-best at tTotalAccJerk-energy() 390.976269 0.800317376355 0.798786919831 9.023731
-one level deeper, used= ['tTotalAcc-energy()', 'tTotalAccJerk-energy()']
-best at tTotalAcc-q75() 405.871727 0.836815657234 0.831223628692 12.128272999999998
-one level deeper, used= ['tTotalAcc-energy()', 'tTotalAccJerk-energy()', 'tTotalAcc-q75()']
-best at tTotalAccL1Norm-iqr() 408.944699 0.844221105528 0.834651898734 13.055301
-one level deeper, used= ['tTotalAcc-energy()', 'tTotalAccJerk-energy()', 'tTotalAcc-q75()', 'tTotalAccL1Norm-iqr()']
-best at tTotalAccJerkMagSq-iqr() 412.040183 0.852155514414 0.8444092827 13.959817000000001
-one level deeper, used= ['tTotalAcc-energy()', 'tTotalAccJerk-energy()', 'tTotalAcc-q75()', 'tTotalAccL1Norm-iqr()', 'tTotalAccJerkMagSq-iqr()']
-best at tTotalAcc-q25() 411.990302 0.857445120339 0.847573839662 17.009698
-one level deeper, used= ['tTotalAcc-energy()', 'tTotalAccJerk-energy()', 'tTotalAcc-q75()', 'tTotalAccL1Norm-iqr()', 'tTotalAccJerkMagSq-iqr()', 'tTotalAcc-q25()']
-best at tTotalAccMagSq-max() 411.802081 0.859825443004 0.852848101266 18.197919
-one level deeper, used= ['tTotalAcc-energy()', 'tTotalAccJerk-energy()', 'tTotalAcc-q75()', 'tTotalAccL1Norm-iqr()', 'tTotalAccJerkMagSq-iqr()', 'tTotalAcc-q25()', 'tTotalAccMagSq-max()']
-best at tTotalAccJerk-iqr() 411.211948 0.863263686855 0.855748945148 20.788051999999997
-one level deeper, used= ['tTotalAcc-energy()', 'tTotalAccJerk-energy()', 'tTotalAcc-q75()', 'tTotalAccL1Norm-iqr()', 'tTotalAccJerkMagSq-iqr()', 'tTotalAcc-q25()', 'tTotalAccMagSq-max()', 'tTotalAccJerk-iqr()']
-best at tTotalAccL1Norm-median() 408.179375 0.860089923301 0.853902953586 21.820624999999996
-one level deeper, used= ['tTotalAcc-energy()', 'tTotalAccJerk-energy()', 'tTotalAcc-q75()', 'tTotalAccL1Norm-iqr()', 'tTotalAccJerkMagSq-iqr()', 'tTotalAcc-q25()', 'tTotalAccMagSq-max()', 'tTotalAccJerk-iqr()', 'tTotalAccL1Norm-median()']
-best at tTotalAccL1Norm-mean() 407.268772 0.860354403597 0.852056962025 22.731227999999994
-stopping: not better than previous: 407.2688 vs 408.1794
+best at tTotalAcc-std() 340.475044 0.690286312847 0.501381439948 4.5249559999999995
+one level deeper, used= ['tTotalAcc-std()']
+best at tTotalAccJerk-std() 387.970471 0.793473852678 0.637250121892 9.029529
+one level deeper, used= ['tTotalAcc-std()', 'tTotalAccJerk-std()']
+best at tTotalAcc-q75() 399.865929 0.824712432485 0.68438160247 12.134070999999999
+one level deeper, used= ['tTotalAcc-std()', 'tTotalAccJerk-std()', 'tTotalAcc-q75()']
+best at tTotalAccMagSq-max() 403.652782 0.833113775138 0.723061921014 13.347217999999998
+one level deeper, used= ['tTotalAcc-std()', 'tTotalAccJerk-std()', 'tTotalAcc-q75()', 'tTotalAccMagSq-max()']
+best at tTotalAcc-q25() 405.602901 0.844418021166 0.7289127255 16.397098999999997
+one level deeper, used= ['tTotalAcc-std()', 'tTotalAccJerk-std()', 'tTotalAcc-q75()', 'tTotalAccMagSq-max()', 'tTotalAcc-q25()']
+best at tTotalAccL1Norm-iqr() 405.699592 0.845716314082 0.741426946205 17.300407999999997
+one level deeper, used= ['tTotalAcc-std()', 'tTotalAccJerk-std()', 'tTotalAcc-q75()', 'tTotalAccMagSq-max()', 'tTotalAcc-q25()', 'tTotalAccL1Norm-iqr()']
+best at tTotalAccJerkL1Norm-iqr() 405.796283 0.847549634641 0.758329270275 18.203716999999997
+one level deeper, used= ['tTotalAcc-std()', 'tTotalAccJerk-std()', 'tTotalAcc-q75()', 'tTotalAccMagSq-max()', 'tTotalAcc-q25()', 'tTotalAccL1Norm-iqr()', 'tTotalAccJerkL1Norm-iqr()']
+best at tTotalAccMagSq-iqr() 404.892974 0.847244122045 0.762717373639 19.107025999999998
+one level deeper, used= ['tTotalAcc-std()', 'tTotalAccJerk-std()', 'tTotalAcc-q75()', 'tTotalAccMagSq-max()', 'tTotalAcc-q25()', 'tTotalAccL1Norm-iqr()', 'tTotalAccJerkL1Norm-iqr()', 'tTotalAccMagSq-iqr()']
+best at tTotalAccJerkMagSq-iqr() 404.989665 0.849000745101 0.760767105477 20.010335
+one level deeper, used= ['tTotalAcc-std()', 'tTotalAccJerk-std()', 'tTotalAcc-q75()', 'tTotalAccMagSq-max()', 'tTotalAcc-q25()', 'tTotalAccL1Norm-iqr()', 'tTotalAccJerkL1Norm-iqr()', 'tTotalAccMagSq-iqr()', 'tTotalAccJerkMagSq-iqr()']
+best at tTotalAccL1Norm-median() 403.957092 0.849917475376 0.762392328945 21.042908
+one level deeper, used= ['tTotalAcc-std()', 'tTotalAccJerk-std()', 'tTotalAcc-q75()', 'tTotalAccMagSq-max()', 'tTotalAcc-q25()', 'tTotalAccL1Norm-iqr()', 'tTotalAccJerkL1Norm-iqr()', 'tTotalAccMagSq-iqr()', 'tTotalAccJerkMagSq-iqr()', 'tTotalAccL1Norm-median()']
+best at tTotalAccMagSq-mean() 403.046489 0.84953552776 0.762879895986 21.953511
+one level deeper, used= ['tTotalAcc-std()', 'tTotalAccJerk-std()', 'tTotalAcc-q75()', 'tTotalAccMagSq-max()', 'tTotalAcc-q25()', 'tTotalAccL1Norm-iqr()', 'tTotalAccJerkL1Norm-iqr()', 'tTotalAccMagSq-iqr()', 'tTotalAccJerkMagSq-iqr()', 'tTotalAccL1Norm-median()', 'tTotalAccMagSq-mean()']
+best at tTotalAccMagSq-min() 402.025867 0.849382535228 0.761742239558 22.974133
+one level deeper, used= ['tTotalAcc-std()', 'tTotalAccJerk-std()', 'tTotalAcc-q75()', 'tTotalAccMagSq-max()', 'tTotalAcc-q25()', 'tTotalAccL1Norm-iqr()', 'tTotalAccJerkL1Norm-iqr()', 'tTotalAccMagSq-iqr()', 'tTotalAccJerkMagSq-iqr()', 'tTotalAccL1Norm-median()', 'tTotalAccMagSq-mean()', 'tTotalAccMagSq-min()']
+best at tTotalAccL1Norm-mean() 400.115264 0.8473967821 0.763042418333 23.884735999999997
+one level deeper, used= ['tTotalAcc-std()', 'tTotalAccJerk-std()', 'tTotalAcc-q75()', 'tTotalAccMagSq-max()', 'tTotalAcc-q25()', 'tTotalAccL1Norm-iqr()', 'tTotalAccJerkL1Norm-iqr()', 'tTotalAccMagSq-iqr()', 'tTotalAccJerkMagSq-iqr()', 'tTotalAccL1Norm-median()', 'tTotalAccMagSq-mean()', 'tTotalAccMagSq-min()', 'tTotalAccL1Norm-mean()']
+best at tTotalAccMagSq-median() 400.098637 0.849229997666 0.758004225581 24.901362999999996
+one level deeper, used= ['tTotalAcc-std()', 'tTotalAccJerk-std()', 'tTotalAcc-q75()', 'tTotalAccMagSq-max()', 'tTotalAcc-q25()', 'tTotalAccL1Norm-iqr()', 'tTotalAccJerkL1Norm-iqr()', 'tTotalAccMagSq-iqr()', 'tTotalAccJerkMagSq-iqr()', 'tTotalAccL1Norm-median()', 'tTotalAccMagSq-mean()', 'tTotalAccMagSq-min()', 'tTotalAccL1Norm-mean()', 'tTotalAccMagSq-median()']
+best at tTotalAccJerkL1Norm-mean() 398.188034 0.847702329693 0.758979359662 25.811965999999995
+one level deeper, used= ['tTotalAcc-std()', 'tTotalAccJerk-std()', 'tTotalAcc-q75()', 'tTotalAccMagSq-max()', 'tTotalAcc-q25()', 'tTotalAccL1Norm-iqr()', 'tTotalAccJerkL1Norm-iqr()', 'tTotalAccMagSq-iqr()', 'tTotalAccJerkMagSq-iqr()', 'tTotalAccL1Norm-median()', 'tTotalAccMagSq-mean()', 'tTotalAccMagSq-min()', 'tTotalAccL1Norm-mean()', 'tTotalAccMagSq-median()', 'tTotalAccJerkL1Norm-mean()']
+best at tTotalAccJerkMagSq-median() 397.155461 0.847473322113 0.763855030067 26.844538999999994
+one level deeper, used= ['tTotalAcc-std()', 'tTotalAccJerk-std()', 'tTotalAcc-q75()', 'tTotalAccMagSq-max()', 'tTotalAcc-q25()', 'tTotalAccL1Norm-iqr()', 'tTotalAccJerkL1Norm-iqr()', 'tTotalAccMagSq-iqr()', 'tTotalAccJerkMagSq-iqr()', 'tTotalAccL1Norm-median()', 'tTotalAccMagSq-mean()', 'tTotalAccMagSq-min()', 'tTotalAccL1Norm-mean()', 'tTotalAccMagSq-median()', 'tTotalAccJerkL1Norm-mean()', 'tTotalAccJerkMagSq-median()']
+best at tTotalAccJerkL1Norm-min() 396.123798 0.847931704749 0.766130342922 27.876201999999992
+one level deeper, used= ['tTotalAcc-std()', 'tTotalAccJerk-std()', 'tTotalAcc-q75()', 'tTotalAccMagSq-max()', 'tTotalAcc-q25()', 'tTotalAccL1Norm-iqr()', 'tTotalAccJerkL1Norm-iqr()', 'tTotalAccMagSq-iqr()', 'tTotalAccJerkMagSq-iqr()', 'tTotalAccL1Norm-median()', 'tTotalAccMagSq-mean()', 'tTotalAccMagSq-min()', 'tTotalAccL1Norm-mean()', 'tTotalAccMagSq-median()', 'tTotalAccJerkL1Norm-mean()', 'tTotalAccJerkMagSq-median()', 'tTotalAccJerkL1Norm-min()']
+best at tTotalAccL1Norm-energy() 394.62863500000003 0.847091339499 0.759954493743 29.371364999999994
+one level deeper, used= ['tTotalAcc-std()', 'tTotalAccJerk-std()', 'tTotalAcc-q75()', 'tTotalAccMagSq-max()', 'tTotalAcc-q25()', 'tTotalAccL1Norm-iqr()', 'tTotalAccJerkL1Norm-iqr()', 'tTotalAccMagSq-iqr()', 'tTotalAccJerkMagSq-iqr()', 'tTotalAccL1Norm-median()', 'tTotalAccMagSq-mean()', 'tTotalAccMagSq-min()', 'tTotalAccL1Norm-mean()', 'tTotalAccMagSq-median()', 'tTotalAccJerkL1Norm-mean()', 'tTotalAccJerkMagSq-median()', 'tTotalAccJerkL1Norm-min()', 'tTotalAccL1Norm-energy()']
+best at tTotalAccJerkL1Norm-max() 393.451455 0.847091356998 0.763529985373 30.548544999999994
+one level deeper, used= ['tTotalAcc-std()', 'tTotalAccJerk-std()', 'tTotalAcc-q75()', 'tTotalAccMagSq-max()', 'tTotalAcc-q25()', 'tTotalAccL1Norm-iqr()', 'tTotalAccJerkL1Norm-iqr()', 'tTotalAccMagSq-iqr()', 'tTotalAccJerkMagSq-iqr()', 'tTotalAccL1Norm-median()', 'tTotalAccMagSq-mean()', 'tTotalAccMagSq-min()', 'tTotalAccL1Norm-mean()', 'tTotalAccMagSq-median()', 'tTotalAccJerkL1Norm-mean()', 'tTotalAccJerkMagSq-median()', 'tTotalAccJerkL1Norm-min()', 'tTotalAccL1Norm-energy()', 'tTotalAccJerkL1Norm-max()']
+best at tTotalAccJerkMagSq-mean() 391.54085200000003 0.845411116466 0.756053957419 31.459147999999992
+one level deeper, used= ['tTotalAcc-std()', 'tTotalAccJerk-std()', 'tTotalAcc-q75()', 'tTotalAccMagSq-max()', 'tTotalAcc-q25()', 'tTotalAccL1Norm-iqr()', 'tTotalAccJerkL1Norm-iqr()', 'tTotalAccMagSq-iqr()', 'tTotalAccJerkMagSq-iqr()', 'tTotalAccL1Norm-median()', 'tTotalAccMagSq-mean()', 'tTotalAccMagSq-min()', 'tTotalAccL1Norm-mean()', 'tTotalAccMagSq-median()', 'tTotalAccJerkL1Norm-mean()', 'tTotalAccJerkMagSq-median()', 'tTotalAccJerkL1Norm-min()', 'tTotalAccL1Norm-energy()', 'tTotalAccJerkL1Norm-max()', 'tTotalAccJerkMagSq-mean()']
+stopping: spent more energy than for raw data Tx 32.9543 vs 31.4710
 all done!

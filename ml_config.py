@@ -15,7 +15,7 @@ RANDOM_ACCURACY = 0.4
 W_ENERGY = -1
 
 USE_N_FOLD_CROSS_VALIDATION = True
-NUM_VALIDATION_ITERATIONS = 5
+NUM_VALIDATION_ITERATIONS = 3
 
 # if cross-validation is not used: the number of trials on which the score is averaged
 NUM_TRIALS = 1
