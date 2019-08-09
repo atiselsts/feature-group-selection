@@ -86,8 +86,8 @@ def main():
     s = GreedyState()
     print("Loading...")
     s.load(dataset)
-    print("Evaluating baseline accuracy (all features)...")
-    s.evaluate_baseline()
+#    print("Evaluating baseline accuracy (all features)...")
+#    s.evaluate_baseline()
     print("Running greedy, combined score...")
     s.use_accuracy_only = False
     s.greedy()

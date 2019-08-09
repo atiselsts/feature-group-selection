@@ -65,7 +65,7 @@ def read_list_of_features(filename, filters=None):
                 if not any(f in group_name for f in filters):
                     # does not match any filters; skip
                     continue
-           
+
             if "-" in group_name:
                 category = name.split('-')[0]
                 function = name.split('-')[1]

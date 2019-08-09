@@ -1,10 +1,15 @@
 Loading...
 loaded file ../datasets/UCI HAR Dataset/train/features.csv, dimensions: 4694 x 98
 loaded file ../datasets/UCI HAR Dataset/train/y_train.txt, dimensions: 4694 x 1
+loaded file ../datasets/UCI HAR Dataset/train/subject_train.txt, dimensions: 4694 x 1
 loaded file ../datasets/UCI HAR Dataset/validation/features.csv, dimensions: 2658 x 98
 loaded file ../datasets/UCI HAR Dataset/validation/y_validation.txt, dimensions: 2658 x 1
+loaded file ../datasets/UCI HAR Dataset/validation/subject_validation.txt, dimensions: 2658 x 1
 loaded file ../datasets/UCI HAR Dataset/test/features.csv, dimensions: 2947 x 98
 loaded file ../datasets/UCI HAR Dataset/test/y_test.txt, dimensions: 2947 x 1
+loaded file ../datasets/UCI HAR Dataset/test/subject_test.txt, dimensions: 2947 x 1
+subject left out: 1.0
+Stopping energy value is 31.4710
 Calculating mutual information...
 (2.8466694259088152, 'tTotalAcc-min()', 2)
 (2.6613293181533875, 'tTotalAcc-q25()', 4)
@@ -60,14 +65,12 @@ Calculating mutual information...
 (0.28945015970165494, 'tTotalAccJerkMagSq-median()', 49)
 (0.095579353318745341, 'tTotalAccJerkL1Norm-median()', 41)
 (0.0021247653472012133, 'tTotalAccJerk-median()', 30)
-best at tTotalAcc-min() 324.903473 0.656884875847 0.668137088565 3.096527
-best at tTotalAcc-q25() 376.799204 0.76561324304 0.726501526977 6.200796
-best at tTotalAcc-max() 383.277474 0.785553047404 0.761112996267 9.722526
-best at tTotalAccJerk-std() 398.772901 0.825432656132 0.807261621988 14.227098999999999
-best at tTotalAccJerk-energy() 398.306624 0.834085778781 0.808279606379 18.693376
-best at tTotalAcc-mean() 388.574815 0.820541760722 0.794706481167 21.425185
-best at tTotalAcc-q75() 385.524661 0.820165537998 0.78656260604 24.475338999999998
-best at tTotalAccJerk-max() 381.99189 0.820165537998 0.787241262301 28.00811
-best at tTotalAcc-entropy() 375.78401 0.817155756208 0.793349168646 33.21599
-best at tTotalAcc-std() 372.340322 0.819036869827 0.780794027825 37.659678
+best at tTotalAcc-min() 326.903473 0.660067876901 0.636887608069 3.096527
+best at tTotalAcc-q25() 364.799204 0.742767347828 0.78674351585 6.200796
+best at tTotalAcc-max() 383.277474 0.786676747406 0.820365033622 9.722526
+best at tTotalAccJerk-std() 409.772901 0.848172137506 0.965417867435 14.227098999999999
+best at tTotalAccJerk-energy() 406.306624 0.84998045577 0.967339097022 18.693376
+best at tTotalAcc-mean() 398.574815 0.839227767598 0.961575408261 21.425185
+best at tTotalAcc-q75() 391.524661 0.831691321229 0.956772334294 24.475338999999998
+best at tTotalAccJerk-max() 391.99189 0.839328411446 0.95292987512 28.00811
 all done!

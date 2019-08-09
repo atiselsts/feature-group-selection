@@ -1,0 +1,200 @@
+Iteration 0
+Best:  Particle with #features=5 accuracy=0.8288/0.7117 energy=8.3609 score=405.6391 features=[tTotalAcc-iqr(),tTotalAcc-mean(),tTotalAccJerkL1Norm-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-median()]
+Iteration 1
+Best:  Particle with #features=5 accuracy=0.8357/0.7374 energy=10.7388 score=407.2612 features=[tTotalAcc-mean(),tTotalAccJerk-energy(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-median(),tTotalAccMagSq-energy()]
+Iteration 2
+Best:  Particle with #features=5 accuracy=0.8363/0.7533 energy=10.2867 score=407.7133 features=[tTotalAcc-mean(),tTotalAccJerk-energy(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccL1Norm-max()]
+Iteration 3
+Best:  Particle with #features=6 accuracy=0.8413/0.7525 energy=13.1941 score=407.8059 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-energy(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccL1Norm-median()]
+Iteration 4
+Best:  Particle with #features=5 accuracy=0.8350/0.7614 energy=10.0091 score=407.9909 features=[tTotalAcc-mean(),tTotalAccJerk-energy(),tTotalAccJerkMagSq-iqr(),tTotalAccMagSq-iqr(),tTotalAccMagSq-mean()]
+Iteration 5
+Best:  Particle with #features=7 accuracy=0.8455/0.7676 energy=14.3713 score=408.6287 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-energy(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccL1Norm-max(),tTotalAccL1Norm-median()]
+Iteration 6
+Best:  Particle with #features=5 accuracy=0.8236/0.7299 energy=10.0164 score=401.9836 features=[tTotalAcc-mean(),tTotalAccJerk-energy(),tTotalAccJerkMagSq-iqr(),tTotalAccJerkMagSq-mean(),tTotalAccMagSq-mean()]
+Iteration 7
+Best:  Particle with #features=6 accuracy=0.8413/0.7565 energy=11.9242 score=409.0758 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccL1Norm-max()]
+Iteration 8
+Best:  Particle with #features=10 accuracy=0.8422/0.7663 energy=25.4739 score=395.5261 features=[tTotalAcc-entropy(),tTotalAcc-min(),tTotalAcc-q25(),tTotalAcc-std(),tTotalAccJerk-energy(),tTotalAccJerkL1Norm-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccL1Norm-max(),tTotalAccL1Norm-min()]
+Iteration 9
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 10
+Best:  Particle with #features=7 accuracy=0.8284/0.7595 energy=18.3142 score=395.6858 features=[tTotalAcc-mean(),tTotalAccJerk-correlation(),tTotalAccJerk-entropy(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 11
+Best:  Particle with #features=8 accuracy=0.8426/0.7710 energy=21.3773 score=399.6227 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-correlation(),tTotalAccJerk-entropy(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 12
+Best:  Particle with #features=7 accuracy=0.8283/0.7367 energy=10.8043 score=403.1957 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerkMagSq-iqr(),tTotalAccJerkMagSq-median(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-max(),tTotalAccMagSq-mean()]
+Iteration 13
+Best:  Particle with #features=7 accuracy=0.8389/0.7499 energy=12.6783 score=406.3217 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean(),tTotalAccMagSq-min()]
+Iteration 14
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 15
+Best:  Particle with #features=8 accuracy=0.8426/0.7710 energy=21.3773 score=399.6227 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-correlation(),tTotalAccJerk-entropy(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 16
+Best:  Particle with #features=7 accuracy=0.8366/0.7600 energy=18.3142 score=399.6858 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-correlation(),tTotalAccJerk-entropy(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 17
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 18
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 19
+Best:  Particle with #features=7 accuracy=0.8421/0.7611 energy=16.1694 score=404.8306 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-correlation(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 20
+Best:  Particle with #features=7 accuracy=0.8421/0.7611 energy=16.1694 score=404.8306 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-correlation(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 21
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 22
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 23
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 24
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 25
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 26
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 27
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 28
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 29
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 30
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 31
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 32
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 33
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 34
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 35
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 36
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 37
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 38
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 39
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 40
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 41
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 42
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 43
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 44
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 45
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 46
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 47
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 48
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 49
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 50
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 51
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 52
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 53
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 54
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 55
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 56
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 57
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 58
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 59
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 60
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 61
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 62
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 63
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 64
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 65
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 66
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 67
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 68
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 69
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 70
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 71
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 72
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 73
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 74
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 75
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 76
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 77
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 78
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 79
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 80
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 81
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 82
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 83
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 84
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 85
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 86
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 87
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 88
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 89
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 90
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 91
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 92
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 93
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 94
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 95
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 96
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 97
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 98
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]
+Iteration 99
+Best:  Particle with #features=6 accuracy=0.8413/0.7487 energy=11.6466 score=409.3534 features=[tTotalAcc-mean(),tTotalAcc-min(),tTotalAccJerk-min(),tTotalAccJerkMagSq-iqr(),tTotalAccL1Norm-iqr(),tTotalAccMagSq-mean()]

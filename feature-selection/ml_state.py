@@ -3,7 +3,7 @@ import numpy as np
 import copy
 
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import ShuffleSplit
+from sklearn.model_selection import ShuffleSplit, KFold
 from sklearn.metrics import f1_score
 
 import sys
@@ -56,12 +56,17 @@ class State:
                 else:
                     self.cv.append(self.alltrain[i])
                     self.cv_y.append(self.alltrain_y[i])
-                    
+
+            print("subject left out:", self.subject_left_out)
+#            print("labels for cv: ", self.cv_y)
+#            print("labels for test: ", self.left_out_y)
+
             self.cv = np.asarray(self.cv)
             self.cv_y = np.asarray(self.cv_y).ravel()
 
             self.left_out = np.asarray(self.left_out)
             self.left_out_y = np.asarray(self.left_out_y).ravel()
+
 
         filename = os.path.join("..", "feature_names.csv")
         self.names = utils.read_list_of_features(filename)
@@ -115,7 +120,8 @@ class State:
             left_out_features = self.left_out[:,selector]
             validation_score = 0
             test_score = 0
-            rs = ShuffleSplit(n_splits = NUM_VALIDATION_ITERATIONS, test_size = 0.33)
+#            rs = ShuffleSplit(n_splits = NUM_VALIDATION_ITERATIONS, test_size = 0.33)
+            rs = KFold(n_splits = NUM_VALIDATION_ITERATIONS) #, test_size = 0.33)
             scores = []
             # use balanced weigths to account for class imbalance
             # (we're trying to optimize f1 score, not accuracy)
@@ -123,16 +129,23 @@ class State:
                                          class_weight = "balanced")
             for train_index, test_index in rs.split(features):
                 clf.fit(features[train_index], self.cv_y[train_index])
-                s1 = clf.score(features[test_index], self.cv_y[test_index])
-                s2 = clf.score(left_out_features, self.left_out_y)
+#                s1 = clf.score(features[test_index], self.cv_y[test_index])
+#                s2 = clf.score(left_out_features, self.left_out_y)
+
+                hypothesis = clf.predict(features[test_index])
+                s1 = f1_score(self.cv_y[test_index], hypothesis, average="micro")
+
+                hypothesis = clf.predict(left_out_features)
+                s2 = f1_score(self.left_out_y, hypothesis, average="micro")
+
                 scores.append("{:2.2f} ({:2.2f})".format(s1, s2))
                 validation_score += s1
                 test_score += s2
             validation_score /= NUM_VALIDATION_ITERATIONS
             test_score /= NUM_VALIDATION_ITERATIONS
-            #names = [self.groups[i] for i in indexes]
-            #print(names)
-            #print("validation/test:" , scores)
+#            names = [self.groups[i] for i in indexes]
+#            print(names)
+#            print("validation/test:" , scores)
         else:
             # simply train and then evaluate
             features_train = self.train[:,selector]

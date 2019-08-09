@@ -32,7 +32,7 @@ sys.path.append("../..")
 import utils
 from ml_config import *
 
-INPUT_DIR = "./ProtocolData"
+INPUT_DIR = "./Protocol"
 
 INPUTS = [
     "subject101.dat",
@@ -165,7 +165,7 @@ def process():
         per_sub_per_label["test"][label] = per_label[label][(train_n + validation_n):]
 
 
-    for sub in SUBS:
+    for sub in SUBSETS:
         create_out_dir(os.path.join("./", sub))
         create_out_dir(os.path.join("./", sub, OUT_DIR))
 
@@ -195,7 +195,7 @@ def process():
             filename = os.path.join("./", sub, OUT_DIR, "total_acc_{}_{}.txt".format(a, sub))
             with open(filename, "w") as outf:
                 for label in order:
-                    for index in per_sub_per_label[sub][label]:
+                    for index, subject in per_sub_per_label[sub][label]:
                         slice = data[a][index:index+WINDOW_SIZE_SAMPLES]
                         sslice = ["{:e}".format(u) for u in slice]
                         outf.write(" ".join(sslice) + "\n")
