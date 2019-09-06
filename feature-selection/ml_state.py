@@ -57,9 +57,7 @@ class State:
                     self.cv.append(self.alltrain[i])
                     self.cv_y.append(self.alltrain_y[i])
 
-            print("subject left out:", self.subject_left_out)
-#            print("labels for cv: ", self.cv_y)
-#            print("labels for test: ", self.left_out_y)
+            print("number of the subject left out:", int(self.subject_left_out))
 
             self.cv = np.asarray(self.cv)
             self.cv_y = np.asarray(self.cv_y).ravel()
