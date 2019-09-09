@@ -19,7 +19,10 @@ import utils
 #     This should be in a file ./out.txt. Assuming `make` has been run in the
 #     `c-implementation` folder, the file can be produced by:
 #     $ ../c-implementation/output-test > out.txt
-#    
+#
+
+DO_PRINT_AVG_CURRENT = False
+SAMPLING_RATE = 50
 
 ########################################
 
@@ -133,7 +136,12 @@ def get_processing_charges(results):
         charge_uc = get_processing_charge_uc_per_time(tm)
         charge_uc_per_window = charge_uc / num_windows
 
-        print('costs_cpu["{}"] = {:f}'.format(name, charge_uc_per_window))
+        if DO_PRINT_AVG_CURRENT:
+            seconds = SAMPLING_RATE / WINDOW_SIZE_SAMPLES
+            avg_current = charge_uc_per_window / seconds
+            print('costs_cpu["{}"] = {:f}\t{:f}\t{:f}'.format(name, charge_uc_per_window, tm / 1000.0, avg_current))
+        else:
+            print('costs_cpu["{}"] = {:f}'.format(name, charge_uc_per_window))
 
     print("")
         
@@ -255,7 +263,12 @@ def get_tx_charges(filename, rawdatadir):
             # because for raw data, there are no overalpping windows
             charge_uc_per_window /= utils.WINDOW_OVERLAP_TIMES
 
-        print('costs_tx["{}"] = {:f}'.format(name, charge_uc_per_window))
+        if DO_PRINT_AVG_CURRENT:
+            seconds = SAMPLING_RATE / WINDOW_SIZE_SAMPLES
+            avg_current = charge_uc_per_window / seconds
+            print('costs_tx["{}"] = {:f}\t{:f}'.format(name, charge_uc_per_window, avg_current))
+        else:
+            print('costs_tx["{}"] = {:f}'.format(name, charge_uc_per_window))
 
 ########################################
 
