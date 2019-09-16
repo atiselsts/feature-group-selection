@@ -309,11 +309,30 @@ def main():
         data, feature_names = read_data(dataset)
         plot(dataset + "_validation.pdf", CATEGORIES, data, False)
         plot(dataset + "_test.pdf", CATEGORIES, data, True)
+        plot_fn("fn_by_ds_" + dataset + ".pdf", feature_names)
 
-#        plot_fn("fn_by_ds_" + dataset + ".pdf", feature_names)
+        for i, c in enumerate(CATEGORIES):
+            feature_names_per_algorithm[i].append(feature_names[i])
 
-#        for i, c in enumerate(CATEGORIES):
-#            feature_names_per_algorithm[i].append(feature_names[i])
+    har_data = {}
+    
+    har_data[10000], _ = parse_pso("har", "m")
+    for numparticles in [10, 30, 100, 300, 1000, 3000]:
+        har_data[numparticles], _ = parse_pso("har", "num_particles_" + str(numparticles))
+
+    keys = sorted(list(har_data.keys()))[:-1]
+    for numparticles in keys:
+        data = [
+            har_data[numparticles],
+            har_data[10000],
+        ]
+        labels = [
+            (str(numparticles) + " particles", "", "o"),
+            ("10000 particles", "", "o")
+        ]
+        plot("har_{}_particles_validation.pdf".format(numparticles), labels, data, False, xlim=28)
+        plot("har_{}_particles_test.pdf".format(numparticles), labels, data, True, xlim=28)
+
 
 #    feature_names_all = []
 #    for i, c in enumerate(CATEGORIES):
