@@ -57,7 +57,7 @@ def plot(filename, labels, data, use_test_scores, xlim=None):
 #                       handler_map={lh.Line2D: lh.HandlerLine2D(numpoints=1)})
 
     handles, labels = ax.get_legend_handles_labels()
-    legend = ax.legend(handles[::-1], labels[::-1])
+    legend = ax.legend(handles[::-1], labels[::-1], prop={'size': 9})
 #              title='Line', loc='upper left')
 
     pl.savefig(filename,
@@ -274,9 +274,9 @@ def viz_generation_selection(name, suffix, colour):
     ll = 7.5
     fig, ax = pl.subplots(1, 1, figsize=(ll * 2, ll))
     sns.heatmap(fn[col_ord].T, cmap='RdBu_r') 
-    pl.title(f'{name}_{suffix}')
+#    pl.title(f'{name}_{suffix}')
     pl.tight_layout()
-    fn = f'nt/{name}_{suffix}_{colour.lower()}.pdf'
+#    fn = f'nt/{name}_{suffix}_{colour.lower()}.pdf'
     pl.savefig(fn)
     pl.close()
     return fn
@@ -302,6 +302,7 @@ def main():
     labels = [("Run " + str(x), suffix, "o") for x in range(1, 11)]
     plot("har_multi_validation.pdf", labels, data, False, xlim=28)
     plot("har_multi_test.pdf", labels, data, True, xlim=28)
+    return
 
     feature_names_per_algorithm = [[] for _ in CATEGORIES]
     for dataset in utils.ALL_DATASETS_SHORT:

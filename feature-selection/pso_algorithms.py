@@ -525,6 +525,7 @@ def mo_pso(dataset):
 ###########################################
 
 def main():
+    print("Num particles =", NUM_PARTICLES)
     dataset = DEFAULT_DATASET
     if len(sys.argv) > 1:
         dataset = sys.argv[1]
@@ -546,8 +547,13 @@ def har_multi():
 ###########################################
 
 if __name__ == '__main__':
-    if True:
-      main()
-    else:
-      har_multi()
-    print("all done!")
+    for n in [10, 30, 100, 300, 1000, 3000]:
+        NUM_PARTICLES = n
+        main()
+        print("")
+
+#    if True:
+#      main()
+#    else:
+#      har_multi()
+#    print("all done!")
