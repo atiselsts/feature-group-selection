@@ -48,7 +48,7 @@ FEATURES = [
 
 def plot(filename):
     fig, ax = pl.subplots()
-    fig.set_size_inches((5, 2.5))
+    fig.set_size_inches((5, 2.1))
 
     labels= [u[0] for u in FEATURES]
     tm_usec = [u[1] for u in FEATURES]
