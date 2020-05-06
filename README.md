@@ -1,5 +1,5 @@
 
-This repository publishes the code and datasets used in the paper *Atis Elsts, Niall Twomey, Ryan McConville, and Ian Craddock. Accuracy-Energy Trade-Off in Feature Selection for Activity Recognition using Wearable Accelerometers. Submitted to Elsevier Pervasive and Mobile Computing*.
+This repository publishes the code and datasets used in the paper *Atis Elsts, Niall Twomey, Ryan McConville, and Ian Craddock. Accuracy-Energy Trade-Off in Feature Selection for Activity Recognition using Wearable Accelerometers. Submitted to Elsevier Journal of Computer Networks and Applications*.
 
 ## Structure ##
 
@@ -18,6 +18,7 @@ This repo has the following structure:
 To prepare the data for running the feature selection algorithms, run these steps (they are explained below):
 
 ```
+$ pip install -r requirements.txt
 $ cd datasets
 $ cd SPHERE; ./preprocess_and_cleanup.py; cd ..
 $ cd "UCI HAR Dataset"; ./preprocess_and_cleanup.py; cd ..
@@ -90,4 +91,4 @@ Particle Swarm Optimization has two implementations:
 * PSO single objective algorithm: optimizes the Pareto front of feature groups by using a single metric that combines energy and accuracy in a weighted way.
 * PSO multi objective: optimizes the Pareto front of feature groups by using two different metrics: accuracy and energy, independently.
 
-The mutual information method calculates the mutual information between each feature and the labels. After that, a list of features can be selected in a greedy fashion.
+The "mutual information" method calculates the [mutual information](https://en.wikipedia.org/wiki/Mutual_information) between each feature and the labels. After that, a list of features can be selected in a greedy fashion.
