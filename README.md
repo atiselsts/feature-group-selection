@@ -1,9 +1,9 @@
 
-This repository publishes the code and datasets used in the paper *Atis Elsts, Niall Twomey, Ryan McConville, and Ian Craddock. Accuracy-Energy Trade-Off in Feature Selection for Activity Recognition using Wearable Accelerometers. Submitted to Elsevier Journal of Computer Networks and Applications*.
+This repository has the code and datasets referenced in the paper *Atis Elsts, Niall Twomey, Ryan McConville, and Ian Craddock. Accuracy-Energy Trade-Off in Feature Selection for Activity Recognition using Wearable Accelerometers. Elsevier Journal of Computer Networks and Applications, In Press. https://doi.org/10.1016/j.jnca.2020.102770*.
 
 ## Structure ##
 
-This repo has the following structure:
+The structure of this repository:
 
 * `datasets` - raw acceleration data for each of the datasets used. The data is raw, but already cleaned up.
 * `datasets/HAR`- this is the HAR dataset data. It has 6 activities.
