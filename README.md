@@ -1,5 +1,7 @@
+This repository contains code for feature selection for human activity recognition applications using acceleremoter data. The feature selection is done taking into account both accuracy (F1 score) and energy efficiency, making the features suitable for low-energy IoT devices. 
 
-This repository has the code and datasets referenced in the paper *Atis Elsts, Niall Twomey, Ryan McConville, and Ian Craddock. Accuracy-Energy Trade-Off in Feature Selection for Activity Recognition using Wearable Accelerometers. Elsevier Journal of Computer Networks and Applications, In Press. https://doi.org/10.1016/j.jnca.2020.102770*.
+
+This repository has the code and datasets referenced in the paper *Atis Elsts, Niall Twomey, Ryan McConville, and Ian Craddock. Energy-efficient activity recognition framework using wearable accelerometers. Elsevier Journal of Computer Networks and Applications, In Press. https://doi.org/10.1016/j.jnca.2020.102770*.
 
 ## Structure ##
 
