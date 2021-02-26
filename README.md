@@ -94,3 +94,7 @@ Particle Swarm Optimization has two implementations:
 * PSO multi objective: optimizes the Pareto front of feature groups by using two different metrics: accuracy and energy, independently.
 
 The "mutual information" method calculates the [mutual information](https://en.wikipedia.org/wiki/Mutual_information) between each feature and the labels. After that, a list of features can be selected in a greedy fashion.
+
+### Funding
+
+This research was funded by the ERDF Activity 1.1.1.2 "Post-doctoral Research Aid" (No. 1.1.1.2/VIAA/2/18/282).
